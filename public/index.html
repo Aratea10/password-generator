@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generador de Contraseñas Seguras</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas Seguras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 15c-1.93 0-3.5-1.57-3.5-3.5S10.07 9 12 9s3.5 1.57 3.5 3.5S13.93 16 12 16zm0-5c-.83 0-1.5.67-1.5 1.5S11.17 14 12 14s1.5-.67 1.5-1.5S12.83 11 12 11z' fill='%235f6caf'/%3E%3C/svg%3E" />
 </head>
 <body>
-  <div class="container">
-    <h1>Generador de Contraseñas Seguras</h1>
-    
-    <div class="password-display">
-      <input type="text" id="passwordOutput" readonly>
-      <button id="copyButton" title="Copiar al portapapeles">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-      </button>
+    <div class="container">
+        <h1>Generador de Contraseñas</h1>
+        
+        <div class="output-container">
+            <input type="text" id="password-output" readonly>
+            <button id="copy-btn" class="copy-btn" aria-label="Copiar al portapapeles">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="control-group">
+            <label for="password-length">Longitud: <span id="length-value">12</span></label>
+            <div class="range-container">
+                <input type="range" id="password-length" min="6" max="30" value="12">
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label>Incluir:</label>
+            <div class="checkbox-group">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-lowercase" checked>
+                    <label for="include-lowercase">Minúsculas (a-z)</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-uppercase" checked>
+                    <label for="include-uppercase">Mayúsculas (A-Z)</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-numbers" checked>
+                    <label for="include-numbers">Números (0-9)</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-symbols">
+                    <label for="include-symbols">Símbolos (@#$)</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button id="generate-btn" class="generate-btn">Generar Contraseña</button>
+        </div>
+        
+        <div class="strength-meter">
+            <div class="strength-title">
+                <span>Fortaleza:</span>
+                <span id="strength-feedback">Buena</span>
+            </div>
+            <div class="strength-bars">
+                <div class="strength-bar"></div>
+                <div class="strength-bar"></div>
+                <div class="strength-bar"></div>
+                <div class="strength-bar"></div>
+            </div>
+        </div>
     </div>
     
-    <div class="strength-meter">
-      <div class="strength-label">Fortaleza:</div>
-      <div class="strength-bars">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <div id="strengthFeedback" class="strength-feedback"></div>
-    </div>
-    
-    <div class="options">
-      <div class="length-option">
-        <label for="passwordLength">Longitud: <span id="lengthValue">12</span></label>
-        <input type="range" id="passwordLength" min="4" max="50" value="12">
-      </div>
-      
-      <div class="checkbox-options">
-        <div class="option">
-          <input type="checkbox" id="includeLowercase" checked>
-          <label for="includeLowercase">Minúsculas (a-z)</label>
-        </div>
-        <div class="option">
-          <input type="checkbox" id="includeUppercase" checked>
-          <label for="includeUppercase">Mayúsculas (A-Z)</label>
-        </div>
-        <div class="option">
-          <input type="checkbox" id="includeNumbers" checked>
-          <label for="includeNumbers">Números (0-9)</label>
-        </div>
-        <div class="option">
-          <input type="checkbox" id="includeSymbols" checked>
-          <label for="includeSymbols">Símbolos (!@#$%^&*)</label>
-        </div>
-      </div>
-    </div>
-    
-    <button id="generateButton" class="generate-btn">Generar Contraseña</button>
-  </div>
-  
-  <footer>
-    <p>Desarrollado como parte de un proyecto de seguridad - 2025</p>
-  </footer>
-  
-  <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

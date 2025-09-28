@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const passwordOutput = document.getElementById('passwordOutput');
-  const copyButton = document.getElementById('copyButton');
-  const lengthValue = document.getElementById('lengthValue');
-  const passwordLength = document.getElementById('passwordLength');
-  const includeLowercase = document.getElementById('includeLowercase');
-  const includeUppercase = document.getElementById('includeUppercase');
-  const includeNumbers = document.getElementById('includeNumbers');
-  const includeSymbols = document.getElementById('includeSymbols');
-  const generateButton = document.getElementById('generateButton');
-  const strengthBars = document.querySelectorAll('.strength-bars .bar');
-  const strengthFeedback = document.getElementById('strengthFeedback');
+  const passwordOutput = document.getElementById('password-output');
+  const copyButton = document.getElementById('copy-btn');
+  const lengthValue = document.getElementById('length-value');
+  const passwordLength = document.getElementById('password-length');
+  const includeLowercase = document.getElementById('include-lowercase');
+  const includeUppercase = document.getElementById('include-uppercase');
+  const includeNumbers = document.getElementById('include-numbers');
+  const includeSymbols = document.getElementById('include-symbols');
+  const generateButton = document.getElementById('generate-btn');
+  const strengthBars = document.querySelectorAll('.strength-bar');
+  const strengthFeedback = document.getElementById('strength-feedback');
   
   const passwordGenerator = {
     lowercase: 'abcdefghijklmnopqrstuvwxyz',

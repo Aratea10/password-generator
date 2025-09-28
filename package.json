@@ -1,20 +1,24 @@
 {
   "name": "password-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generador de contraseñas seguras con JavaScript",
   "main": "index.js",
   "scripts": {
+    "start": "live-server public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aratea10/password-generator.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["password", "security", "generator"],
+  "author": "Sara Gallego Méndez",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Aratea10/password-generator/issues"
   },
-  "homepage": "https://github.com/Aratea10/password-generator#readme"
+  "homepage": "https://github.com/Aratea10/password-generator#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
 }

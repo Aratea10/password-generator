@@ -180,3 +180,33 @@ document.addEventListener('DOMContentLoaded', () => {
   
   generatePassword();
 });
+
+function savePreferences() {
+  const preferences = {
+    length: passwordLength.value,
+    includeLowercase: includeLowercase.checked,
+    includeUppercase: includeUppercase.checked,
+    includeNumbers: includeNumbers.checked,
+    includeSymbols: includeSymbols.checked
+  };
+  localStorage.setItem('passwordGeneratorPrefs', JSON.stringify(preferences));
+}
+
+function loadPreferences() {
+  const savedPrefs = localStorage.getItem('passwordGeneratorPrefs');
+  if (savedPrefs) {
+    const preferences = JSON.parse(savedPrefs);
+    passwordLength.value = preferences.length;
+    lengthValue.textContent = preferences.length;
+    includeLowercase.checked = preferences.includeLowercase;
+    includeUppercase.checked = preferences.includeUppercase;
+    includeNumbers.checked = preferences.includeNumbers;
+    includeSymbols.checked = preferences.includeSymbols;
+  }
+}
+
+[includeLowercase, includeUppercase, includeNumbers, includeSymbols, passwordLength].forEach(element => {
+  element.addEventListener('change', savePreferences);
+});
+
+loadPreferences();

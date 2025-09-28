@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas Seguras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Contraseñas Seguras</h1>
+    
+    <div class="password-display">
+      <input type="text" id="passwordOutput" readonly>
+      <button id="copyButton" title="Copiar al portapapeles">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="strength-meter">
+      <div class="strength-label">Fortaleza:</div>
+      <div class="strength-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div id="strengthFeedback" class="strength-feedback"></div>
+    </div>
+    
+    <div class="options">
+      <div class="length-option">
+        <label for="passwordLength">Longitud: <span id="lengthValue">12</span></label>
+        <input type="range" id="passwordLength" min="4" max="50" value="12">
+      </div>
+      
+      <div class="checkbox-options">
+        <div class="option">
+          <input type="checkbox" id="includeLowercase" checked>
+          <label for="includeLowercase">Minúsculas (a-z)</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="includeUppercase" checked>
+          <label for="includeUppercase">Mayúsculas (A-Z)</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="includeNumbers" checked>
+          <label for="includeNumbers">Números (0-9)</label>
+        </div>
+        <div class="option">
+          <input type="checkbox" id="includeSymbols" checked>
+          <label for="includeSymbols">Símbolos (!@#$%^&*)</label>
+        </div>
+      </div>
+    </div>
+    
+    <button id="generateButton" class="generate-btn">Generar Contraseña</button>
+  </div>
+  
+  <footer>
+    <p>Desarrollado como parte de un proyecto de seguridad - 2025</p>
+  </footer>
+  
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,24 +1,42 @@
 # 🔐 Generador de Contraseñas Seguras
 
-Una aplicación web para generar contraseñas seguras y aleatorias con opciones personalizables.
+<div align="center">
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white)
+
+</div>
+
+Una **aplicación web intuitiva y segura** para crear contraseñas robustas, personalizables y listas para usar. ¡Protege tus cuentas con un solo clic!
 
 ## 🌟 Características
 
-- Generación de contraseñas aleatorias con longitud personalizable
-- Opciones para incluir letras minúsculas, mayúsculas, números y símbolos
-- Medidor de fortaleza de contraseñas
-- Copiar al portapapeles con un clic
-- Interfaz de usuario responsiva
-- Guarda preferencias de usuario
+- **Longitud personalizable**: Ajusta la longitud de tu contraseña con un deslizador intuitivo.
+- **Caracteres seleccionables**: Elige entre:
+  - Letras minúsculas (``a-z``)
+  - Letras mayúsculas (``A-Z``)
+  - Números (``0-9``)
+  - Símbolos (``!@#$%^&*``)
+- **Indicador de fortaleza**: Visualiza en tiempo real qué tan segura es tu contraseña.
+- **Copiado al portapapeles**: Un solo clic y tu contraseña está lista para pegar.
+- **Diseño responsivo**: Funciona perfectamente en móviles, tablets y escritorio.
+- **Preferencias guardadas**: Tus ajustes se recuerdan automáticamente gracias a ``localStorage``.
+
+
 
 ## 🛠️ Tecnologías utilizadas
 
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- LocalStorage API para guardar preferencias
+| TECNOLOGÍA | PROPÓSITO |
+|------------|------------|
+| HTML5 | Estructura semántica y accesible |
+| CSS3 | Diseño moderno, animaciones y responsive |
+| JavaScript (ES6+) | Lógica interactiva y generación segura |
+| LocalStorage API | Persistencias de preferencias del usuario |
+
 
 ## 🚀 Instalación
+Sigue estos pasos para ejecutar el proyecto localmente:
 
 1. Clona este repositorio:
    ```
@@ -42,10 +60,10 @@ Una aplicación web para generar contraseñas seguras y aleatorias con opciones 
 
 ## 🧪 Uso
 
-1. Ajusta la longitud de la contraseña usando el control deslizante
-2. Selecciona qué tipos de caracteres quieres incluir
-3. Haz clic en "Generar Contraseña" para crear una nueva contraseña
-4. Utiliza el botón de copiar para guardar la contraseña en el portapapeles
+1. **Ajusta la longitud** con el control deslizante (ej. 12 caracteres).
+2. **Selecciona los tipos de caracteres** que deseas incluir.
+3. Haz clic en **"Generar Contraseña"**.
+4. ¡Listo! Usa el botón **Copiar** para guardarla en el portapapeles.
 
 ## 🤝 Contribuciones
 
@@ -53,6 +71,6 @@ Las contribuciones son bienvenidas. Por favor, siente libre de abrir un issue o 
 
 ## 📄 Licencia
 
-[MIT](LICENSE)
+Este proyecto está bajo la licencia [MIT](LICENSE) - ¡libre, abierto y para todos!
 
 ✨ ¡Genera contraseñas seguras, sin complicaciones! ✨
